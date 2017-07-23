@@ -149,9 +149,9 @@ sudo node index.js
 ```
 
 ## Set App to Run as Background Service
-Now, we can set the application to run automatically when the Pi boots.
+Now, set the application to run automatically when the Pi boots.
 ```
-sudo ln -s /home/pi/sensortag/sensortag.service /etc/systemd/system/sensortag.service
+sudo cp /home/pi/sensortag/sensortag.service /etc/systemd/system/sensortag.service
 sudo systemctl start sensortag
 sudo systemctl enable sensortag
 ```
