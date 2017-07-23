@@ -132,6 +132,29 @@ sudo ln -s /opt/nodejs/bin/node /usr/bin/node
 sudo ln -s /opt/nodejs/bin/npm /usr/bin/npm
 ``` 
 
+## Download App
+Clone the application from GIT.
+```bash
+git clone https://github.com/Microsoft/sensortag-iot-suite.git
+```
+
+## Configure the App
+Edit the `index.js`, set the configuration constants and add the devices.  Directions for configuring the app are noted in the source code.
+
+You can test the application to make sure it is configured successfully.
+
+**NOTE:** The application MUST be run with elevated privileges to take advantage of certain interfaces required by supporting libaries.
+```bash
+sudo node index.js
+```
+
+## Set App to Run as Background Service
+Now, we can set the application to run automatically when the Pi boots.
+```
+sudo ln -s /home/pi/sensortag/index.js /etc/init.d/sensortag.js
+sudo update-rc.d sensortag.js default
+```
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a 
