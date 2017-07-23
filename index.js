@@ -196,7 +196,7 @@ function config_gyroscope(sensorTag, cb) {
 }
 
 function config_luxometer(sensorTag, cb) {
-    if (ENABLE_LUXOMETER) {
+    if (ENABLE_LUXOMETER && sensorTag.type === 'cc2650') {
         console.log('enabling luxometer...');
         sensorTag.enableLuxometer(() => {
 
