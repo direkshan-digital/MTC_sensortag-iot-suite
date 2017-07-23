@@ -1,0 +1,13 @@
+[Unit]
+Description=SensorTag
+
+[Service]
+ExecStart=/home/pi/sensortag/index.js
+Restart=always
+User=root
+Group=root
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/home/pi/sensortag
+
+[Install]
+WantedBy=multi-user.target

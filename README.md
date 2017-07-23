@@ -133,9 +133,9 @@ sudo ln -s /opt/nodejs/bin/npm /usr/bin/npm
 ``` 
 
 ## Download App
-Clone the application from GIT.
+Clone the application from GIT to the `/home/pi/sensortag` folder (otherwise, you'll need to update the paths located in the `sensortag.service` file).
 ```bash
-git clone https://github.com/Microsoft/sensortag-iot-suite.git
+git clone https://github.com/Microsoft/sensortag-iot-suite.git /home/pi/sensortag
 ```
 
 ## Configure the App
@@ -151,8 +151,9 @@ sudo node index.js
 ## Set App to Run as Background Service
 Now, we can set the application to run automatically when the Pi boots.
 ```
-sudo ln -s /home/pi/sensortag/index.js /etc/init.d/sensortag.js
-sudo update-rc.d sensortag.js default
+sudo ln -s /home/pi/sensortag/sensortag.service /etc/systemd/system/sensortag.service
+sudo systemctl start sensortag
+sudo systemctl enable sensortag
 ```
 
 # Contributing
