@@ -1,5 +1,6 @@
 [Unit]
 Description=SensorTag
+Requires=bluetooth.service
 
 [Service]
 ExecStart=/home/pi/sensortag/index.js
@@ -10,4 +11,4 @@ Environment=PATH=/usr/bin:/usr/local/bin
 WorkingDirectory=/home/pi/sensortag
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=bluetooth.target
