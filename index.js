@@ -37,11 +37,11 @@ let DEVICES = [
 //            you MUST wait 15 mins before IoT Hub begins reporting
 const ENABLE_IR_TEMPERATURE = false;
 const ENABLE_ACCELEROMETER = false;
-const ENABLE_HUMIDITY = false; //t
+const ENABLE_HUMIDITY = true;
 const ENABLE_MAGNETOMETER = false;
-const ENABLE_BAROMETRIC_PRESSURE = false; //t
+const ENABLE_BAROMETRIC_PRESSURE = true;
 const ENABLE_GYROSCOPE = false;
-const ENABLE_LUXOMETER = true; //t
+const ENABLE_LUXOMETER = true;
 
 // milliseconds between transmissions (default 5 seconds)
 const TX_TIMEOUT = 5000;
